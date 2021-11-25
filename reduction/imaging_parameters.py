@@ -3038,8 +3038,25 @@ line_imaging_parameters_custom = {
         # "mask": "G338.93_B6_spw1_12M_sio.image_2sigma_e2_d8.mask",
     },
     "G351.77_B3_12M_robust0": {
-        "threshold": "30mJy",
-        "startmodel": "G351.77_B3_uid___A001_X1296_X209_continuum_merged_12M_robust0_selfcal4_finaliter",
+        "niter": 5000000,
+        "threshold": "5sigma",
+        "deconvolver": "multiscale",
+        "scales": [0, 6, 18, 24],
+        "pblimit": 0.05,
+        "pbmask": 0.1,
+        "cyclefactor": 2.0,
+        "gain":0.06,
+        #"startmodel": "G351.77_B3_uid___A001_X1296_X209_continuum_merged_12M_robust0_selfcal4_finaliter",
+    },
+    "G351.77_B3_7M12M_robust0": {
+        "niter": 5000000,
+        "threshold": "5sigma",
+        "deconvolver": "multiscale",
+        "scales": [0, 6, 18, 24],
+        "pblimit": 0.2,
+        "pbmask": 0.1,
+        "cyclefactor": 2.0,
+        "gain":0.06,
     },
     "G351.77_B3_12M_robust0_h41a": {
         "threshold": "16mJy",  # noise ~ 4mJy in channels off line peak.
